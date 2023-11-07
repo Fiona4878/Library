@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <title>用户登录界面</title>
+    <link th:href="@{/login/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/login/css/signin.css}" rel="stylesheet">
+    <link th:href="@{/login/css/a.css}" rel="stylesheet">
+
+</head>
+<body class="text-center">
+<div class="logintop">
+    <span>欢迎登录图书馆信息管理系统</span>
+    <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">帮助</a></li>
+        <li><a href="#">关于</a></li>
+    </ul>
+</div>
+<div class="loginbody">
+    <span class="systemlogo"></span>
+    <form method="post" th:action="@{/login/LoginIn}"  class="loginbox">
+        <ul>
+            <h1 class="h3 mt-4 font-weight-normal" th:text="#{login.tip}">请登陆</h1>
+            <li><input type="text" name="username"class="loginuser"
+                       th:placeholder="#{login.username}" required="" autofocus=""></li>
+            <li><input type="password" class="loginpwd" name="pwd"
+                       th:placeholder="#{login.password}" required=""></li>
+            <li>
+                <div class="checkbox mt-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> [[#{login.rememberme}]]
+                    </label>
+                </div>
+            </li>
+            <li>
+                <button class="btn btn-lg loginbtn" type="submit"
+                        th:text="#{login.button}"></button>
+            </li>
+            <li><p class="mb-3 text-muted">© <span th:text="${currentYear}">2018</span>-<span
+                    th:text="${currentYear}+1">2019</span></p></li>
+            <li>
+                <a class="btn btn-sm" th:href="@{/toLoginPage(l='zh_CN')}">中文</a>
+                <a class="btn btn-sm" th:href="@{/toLoginPage(l='en_US')}">English</a>
+            </li>
+        </ul>
+    </form>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,404 @@
+
+.accountSideOption1 {
+    background: #fff;
+}
+
+.accountSideOption1 dt {
+    margin: 0;
+    padding: 0 0 0 45px;
+    width: 153px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #ededed;
+    font-size: 14px;
+    border-bottom: 1px #ddd solid;
+    position: relative;
+    cursor: pointer;
+}
+
+.accountSideOption1 dt .icon_1 {
+    /*background: url(../images/m_i_1.png) no-repeat;*/
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 10px;
+    top: 5px
+}
+
+.accountSideOption1 dt .icon_2 {
+    /*background: url(../images/m_i_2.png) no-repeat;*/
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 10px;
+    top: 5px
+}
+
+.accountSideOption1 dt .icon_3 {
+    /*background: url(../images/m_i_3.png) no-repeat;*/
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 10px;
+    top: 5px
+}
+
+.accountSideOption1 dt .icon_4 {
+    /*background: url(../images/m_i_4.png) no-repeat;*/
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 10px;
+    top: 5px
+}
+
+.accountSideOption1 dd {
+    padding: 6px 0;
+    font-size: 13px;
+}
+
+.accountSideOption1 dd ul li {
+    height: 30px;
+    background: none;
+}
+
+.accountSideOption1 dd ul li a {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 45px;
+    /*background: url("../images/liselected.gif") no-repeat scroll 25px center;*/
+    font-size: 12px;
+    display: block;
+    color: #666;
+}
+
+.menu_style .user_title {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+}
+
+
+/*右面内容区start*/
+.right_style {
+    height: 600px;
+    overflow: hidden;
+    padding: 5px 25px;
+}
+
+.page {
+    width: 100%;
+    height: 102%;
+    padding: 0 5px;
+    overflow: hidden;
+}
+
+.bookTab {
+    width: 100%;
+    height: 102%;
+    background-color: #ededed;;
+    border: 1px solid #afc5d2;
+
+}
+
+.bookBox {
+    height: 102%;
+    font-size: 18px;
+}
+
+.bookBox .hd {
+    width: 100%;
+    overflow: hidden;
+    background: url("../img/book-line.png") no-repeat bottom left;
+    height: 40px;
+}
+
+.bookBox .hd ul {
+    overflow: hidden;
+}
+
+.bookBox .hd ul li {
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bookBox .hd ul li .on, .bookBox .hd ul li:hover {
+    border-bottom: 2px solid #454545;
+    padding-bottom: 8px;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.bookBox .hd ul > a {
+    padding-left: 2pc;
+    line-height: 38px;
+}
+
+.bookBox .bd {
+    width: 100%;
+    height: 102%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.bookBox .bd ul li img {
+    width: 131px;
+    height: 189px;
+    margin: 10px 25px;
+    float: left;
+}
+/*今日推荐样式展示end*/
+
+/*用户信息展示start*/
+.title_Section{
+    border-bottom: 1px solid #ddd;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+}
+.title_Section span{
+    border-bottom: 3px solid #F30;
+    padding:7px 10px;
+}
+.Personal_info .xinxi{
+    width: 500px;
+    margin-top: 30px;
+    float: left;
+}
+.Personal_info  .xinxi li{
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-bottom: 1px dashed #ddd;
+}
+.Personal_info .xinxi li label{
+    width: 80px;
+    float: left;
+    text-align: right;
+}
+.Personal_info .xinxi li span{
+    float: left;
+    width: 300px;
+    height: 40px;
+    padding:0px 10px;
+}
+.Personal_info .xinxi .add_time,.Personal_info .xinxi .add_sex{
+    display: none;
+}
+.bottom .modify,.bottom .confirm{
+    background: #F30;
+    color: #fff;
+}
+.bottom input{
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Personal_info .Head_portrait{
+    width: 300px;
+    float: right;
+    margin-top: 20px;
+}
+.Personal_info .Head_portrait .User_avatar{
+    width: 202px;
+    height: 202px;
+    padding:2px;
+    border:1px solid #ddd;
+}
+.Personal_info .Head_portrait .submit{
+    width: 120px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    background: #fff;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+/*用户信息展示end*/
+/*         图书架页面start*/
+.user_integral_style .hd{
+    margin:10px 0px;
+}
+.user_integral_style .bd{
+    margin: 20px 0px;
+}
+.user_integral_style .bd table{
+    width: 100%;
+}
+.user_integral_style .bd table .thead_title{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    font-size: 16px;
+}
+.user_integral_style .bd table thead td{
+    background: #F3F3F3;
+    width: 25%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-top: 1px solid #ddd;
+}
+.user_integral_style .bd table tbody td{
+    margin-left:-1px;
+    border:1px solid #ddd;
+    height:5px;
+    line-height:50px;
+    text-align:center
+}
+.integral .Paging {
+    margin: 30px 0px;
+    height: 50px;
+    padding: 10px;
+}
+.integral .Pagination {
+    width: 600px;
+    margin: 0 auto
+}
+.integral .Paging a {
+    color: #999999;
+    margin: 0px 5px;
+    font-size: 14px;
+    padding: 5px 15px;
+    border: 1px solid #ddd;
+}
+.user_style .Paging a:hover, .Inside_pages .Paging a.on {
+    background: #FF4A4A;
+    color: #fff;
+    border: 1px solid #FF4A4A
+}
+.user_style .Paging .p-skip .input-txt {
+    width: 26px;
+    height: 26px;
+    margin: 0 3px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+    /*         图书架页面end*/
+/*我的借阅列表start*/
+.box1{
+    width: 80%;
+    height: 100%;
+}
+.box2{
+    margin-top: 10px;
+}
+
+/*.input-text{*/
+/*    background-color:rgba(255,255,255,0.5);*/
+/*    text-align: left;*/
+/*    font-size:16px;*/
+/*    line-height:40px;*/
+/*    height: 40px;*/
+/*    border-radius: 5%;*/
+/*}*/
+table{
+    background-color: rgba(255, 255, 255, 0.61);
+    border: none;
+}
+th{
+    background-color: rgba(136, 211, 211, 0.75);
+    width: 20px;
+}
+.listBook thead td{
+    width: 40px;
+    height: 40px;
+}
+/*我的借阅列表end*/
+
+.Details_list{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.Details_list .hd{
+    margin-top: 10px;
+}
+.Details_list .hd ul{
+    border-bottom: 1px solid;
+    position: relative;
+    height: 40px;
+}
+.Details_list .hd li{
+    float: left;
+    cursor: pointer;
+    width: 120px;
+    font-size: 16px;
+    text-align: center;
+    height: 39px;
+    line-height: 39px;
+    border:1px solid #ddd;
+    margin-left: -1px;
+}
+.Details_list bd{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+.Details_list .myBorrow ,.Details_list .myBook{
+    width: 488px;
+    height: 600px;
+    display: block;
+}
+.Details_list table{
+    width: 100%;
+}
+.Details_list table thead{
+    height: 40px;
+    line-height: 40px;
+    border:1px solid #ddd;
+    font-size: 16px;
+    background: #ededed;
+    text-align: center;
+}
+.Details_list table thead .label_1{
+    width: 200px;
+}
+.Details_list table tbody td{
+    margin-left:-1px;
+    border:1px solid #ddd;
+    height:5px;
+    line-height:50px;
+    text-align:center
+}
+.Paging{
+    margin:30px 0pc;
+    height: 50px;
+    padding:10px;
+}
+.Pagination{
+    width: 600px;
+    margin: 0 auto;
+}
+.Paging a{
+    color: #999999;
+    margin:0 5px;
+    border:1px solid #ddd;
+}
+/*右面内容区end*/
+/*底部样式*/
+.footer {
+    width: 100%;
+    height: 150px;
+    background-color: #0b3a58;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 150px;
+    font-size: 20px;
+}

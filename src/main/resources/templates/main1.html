@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>图书馆管理中心</title>
+    <link href="/login/css/a.css" rel="stylesheet" type="text/css" />
+    <link href="/login/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/login/css/style2.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="/login/css/bootstrap.min.css">
+</head>
+<body>
+<div class="box">
+    <div class="top1">
+        <p th:text="|欢迎 ${session.username}|"></p>
+        <span><a href="/logout" title="退出系统">[退出]</a>| 热线电话 10086</span>
+    </div>
+    <div class="i_top">
+        <div class="logo">
+            <img src="/login/img/logo1.png" border="0" title="图书管理系统" alt="图书管理系统" width="150px" height="100px"/></a>
+        </div>
+        <div class="top_right">
+            <div class="search">
+                <form method="get" action="list.html" target="_blank">
+                    <input type="text" name="keywords" id="scbar_txt" value="" autocomplete="off" x-webkit-speech speech/>
+                    <input type="hidden" name="r" value="search/result"/>
+<!--                     <button type="submit" name="searchsubmit" id="scbar_btn" sc="1" class="pn pnc" value="true">搜索&ndash;&gt;-->
+                    </button>
+                </form>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html" target="_self">首&nbsp;页</a></li>
+                    <li class="li_3"><a href="javascript:;" class="noclick">图书分类</a>
+                        <dl class="li_3_content">
+                            <dd><a href="list.html"><span>平面设计</span></a></dd>
+                            <dd><a href="list.html"><span>室内设计</span></a></dd>
+                            <dd><a href="list.html"><span>机械设计</span></a></dd>
+                            <dd><a href="list.html"><span>园林景观设计</span></a></dd>
+                            <dd><a href="list.html"><span>影视后期制作</span></a></dd>
+                        </dl>
+                    </li>
+                    <li><a href="laoshi.html" target="_self">学校管理</a></li>
+                    <li><a href="ganyan.html#" target="_self">其他</a></li>
+                    <li id="jqLoginedInfo" class="li_4"><a class="noclick02" href="member.html">fluxay</a>
+                        <dl class="li_4_content">
+                            <dd><a href="member.html"><span>个人中心</span></a></dd>
+                            <dd><a href="memberStudyLog.html"><span>我的笔记</span></a></dd>
+                            <dd><a href="experience.html"><span>我的提问</span></a></dd>
+                            <dd><a href="#login/logout"><span>退出登录</span></a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="reader_center">
+            <div class="left_style">
+                <div class="menu_style">
+                    <div class="user_title">用户中心</div>
+                    <div class="user_Head">
+                        <div class="user_portrait">
+                            <a href="#" title="修改头像" class="btn_link"></a> <img src="/login/img/headimg.jpg">
+                            <div class="background_img"></div>
+                        </div>
+                        <div class="user_name">
+                            <p><span class="name" th:text="${session.username}">FIONA</span><a href="#">[修改密码]</a></p>
+                            <p>访问时间：2023-10-21 10:23</p>
+                        </div>
+                    </div>
+                    <div class="sideMen" id="sidebar">
+                        <!--菜单列表图层-->
+                        <dl class="accountSideOption1">
+                            <dt class="transaction_manage"><em class="icon_1"></em>今日推荐</dt>
+                            <dd>
+                                <ul>
+                                    <li><a th:href="@{/user/today}"> 今日推荐</a></li>
+                                    <li><a th:href="@{/user/books}"> 全部图书</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="accountSideOption1">
+                            <dt class="transaction_manage"><em class="icon_1"></em>我的图书馆</dt>
+                            <dd>
+                                <ul>
+                                    <!--                                    在书籍列表中可以进行申请借阅，如果书籍在架，则会被添加到用户，如果不在，就会被添加到我的预约&ndash;&gt;-->
+                                    <li><a th:href="@{/user/books}"> 全部图书</a></li>
+                                    <!--                                    可在此页面进行查询自己的借阅书籍-->
+                                    <li><a th:href="@{'/user/borrows?user='+${session.username}}"> 我的借阅</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="accountSideOption1">
+                            <dt class="transaction_manage"><em class="icon_2"></em>个人中心</dt>
+                            <dd>
+                                <ul>
+                                    <!--                                    可在此页面显示用户信息，并且做出修改-->
+                                    <li><a th:href="@{/user/Myuser}"> 用户信息</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="right_style">
+                <!--                今日热门模块-->
+                <div id="content1" class="page">
+                    <!-- 图书切换 star -->
+                    <div class="bookTab">
+                        <div class="bookBox">
+                            <div class="hd">
+                                <ul>
+                                    <li class="first_book on">图书</li>
+                                    <a href="/node/489.jspx">中文图书</a>
+                                    <a href="/node/448.jspx">期刊杂志</a>
+                                    <a href="/node/491.jspx">武图好书榜</a>
+                                    <a href="/node/492.jspx">电子图书</a>
+                                    <a href="http://219.140.69.151/opac/websearch/WebReader?cmdACT=RdComBatch&columnID=3">读者自荐</a>
+                                    <a href="/node/538.jspx">图书漂流</a>
+                                    <a href="/node/449.jspx">读者赠书</a>
+                                    <a href="/node/530.jspx">专题图书</a>
+                                    <a href="/node/451.jspx">借阅排行</a>
+                                </ul>
+                            </div>
+                            <div class="bd">
+                                <ul>
+                                    <li>
+                                        <a href="/info/88012.jspx"><img src="/login/img/book1.jpg"/></a>
+                                    </li>
+                                    <li>
+                                        <a href="/info/88011.jspx"><img src="/login/img/book2.jpg"/></a>
+                                    </li>
+                                    <li>
+                                        <a href="/info/88010.jspx"><img src="/login/img/book3.jpg"/></a>
+                                    </li>
+                                    <li>
+                                        <a href="/info/88009.jspx"><img src="/login/img/book4.jpg"/></a>
+                                    </li>
+                                    <li>
+                                        <a href="/info/88008.jspx"><img src="/login/img/book5.jpg"/></a>
+                                    </li>
+                                    <li>
+                                        <a href="/info/88007.jspx"><img src="/login/img/book6.jpg"/></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 图书切换 end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/*login.html样式文件*/
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 40px;
+    /*padding-bottom: 40px;*/
+    /*background-color: #f5f5f5;*/
+}
+.logintop{
+    height:70px;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: black;
+}
+.logintop span{
+    color: #fff;
+    line-height: 70px;
+    text-indent: 66px;
+    color: #afc5d2;
+    float: left;
+}
+.logintop ul{
+    float: right;
+    padding-right: 30px;
+}
+.logintop ul li{
+    float: left;
+    margin-left: 20px;
+    line-height: 70px;
+}
+.logintop ul li a{
+    color: #afc5d2;
+}
+.logintop ul li a:hover{
+    color: #fff;
+}
+
+.loginbody{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    height: 585px;
+    overflow: hidden;
+    text-align: center;
+}
+.systemlogo{
+    width: 300px;
+    height: 100px;
+    display: block;
+    background-image: url("../img/logo1.png");
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.loginbox{
+    width:800px;
+    height: 510px;
+    margin: 0px auto;
+    position: relative;
+    background-image: url("../img/loginlogo.jpg") ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.loginbox ul{
+    width: 50%;
+    height: 80%;
+    background-color: white;
+    position: absolute;
+    right: 30px;
+    top: 40px;
+    border-radius: 10%;
+}
+.loginbox ul li{
+    padding: 10px 0;
+}
+.loginuser{
+    width: 343px;
+    height:48px;
+    background:url(../img/loginuser.png) no-repeat center ;
+    /*使用矢量图标来替换*/
+    border:none;
+    line-height:48px;
+    padding-left:44px;
+    font-size:14px;
+    font-weight:bold;
+}
+.loginpwd{
+    width:343px;
+    height:48px;
+    background:url(../img/loginpassword.png) no-repeat;
+    border:none;
+    line-height:48px;
+    padding-left:44px;
+    font-size:14px;
+    color:#90a2bc;
+}
+.loginbtn{
+    width:343px;
+    height:35px;
+    font-size:14px;
+    background-color: #1c77ac;
+    font-weight:bold;
+    color:#fff;
+    padding-left:44px;
+    cursor:pointer;
+}
+
+.loginuser .loginpwd:focus {
+    z-index: 2;
+}
+

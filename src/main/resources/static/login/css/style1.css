@@ -1,0 +1,62 @@
+/*index的样式文件*/
+span{
+    display: block;
+}
+/*logintop*/
+.logintop{height:47px; position:absolute; top:0; background:url(../img/loginbg1.png) repeat-x;z-index:100; width:100%;}
+.logintop span{color:#fff; line-height:47px; background:url(../img/loginsj.png) no-repeat 21px 18px; text-indent:44px; color:#afc5d2; float:left;}
+.logintop ul{float:right; padding-right:30px;}
+.logintop ul li{float:left; margin-left:20px; line-height:47px;}
+.logintop ul li a{color:#afc5d2;}
+.logintop ul li a:hover{color:#fff;}
+
+/*loginbody*/
+.loginbody{
+    background:url(../img/loginbg3.png) no-repeat center center;
+    width:100%; height:585px;
+    overflow:hidden;
+    position:absolute;
+    top:47px;
+}
+.systemlogo{
+    background-image: url("../img/logo1.png");
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100px;
+    margin:30px auto;
+}
+.loginbox0{
+    width:692px;
+    height: 410px;
+    margin: 0px auto;
+}
+
+.loginlist{
+    width:810px;
+    overflow:hidden;
+}
+.loginlist{margin-top:110px;}
+.loginlist li{float:left; margin-left:100px; margin-right:100px;}
+
+/*悬浮遮罩效果*/
+/*.loginlist li a{ display:block;width:196px; height:252px; background:url(../images/lbg.png) no-repeat; text-align:center; padding-top:25px; cursor:pointer;}*/
+/*.loginlist li a:hover{background:url(../images/lbg1.png) no-repeat;}*/
+
+.loginlist li a p{font-size:16px; color:#fff; padding-top:10px;}
+
+
+
+/*底部*/
+.loginbm{
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    position: absolute;
+    bottom: 10px;
+    width:100%;
+    color:#0b3a58;
+}
+.loginbm a{font-weight:bold;color:#0b3a58;}
+.loginbm a:hover{color:#fff;}

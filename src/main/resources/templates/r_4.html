@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>图书馆管理中心</title>
+    <link href="/login/css/a.css" rel="stylesheet" type="text/css" />
+    <link href="/login/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/login/css/style2.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="/login/css/bootstrap.min.css">
+</head>
+<body>
+<div class="box">
+    <div class="top1">
+        <p th:text="|欢迎 ${session.username}|"></p>
+        <span><a href="/logout" title="退出系统">[退出]</a>| 热线电话 10086</span>
+    </div>
+    <div class="i_top">
+        <div class="logo">
+            <img src="/login/img/logo1.png" border="0" title="图书管理系统" alt="图书管理系统" width="150px" height="100px"/></a>
+        </div>
+        <div class="top_right">
+            <div class="search">
+                <form method="get" action="list.html" target="_blank">
+                    <input type="text" name="keywords" id="scbar_txt" value="" autocomplete="off" x-webkit-speech speech/>
+                    <input type="hidden" name="r" value="search/result"/>
+                    <!--                     <button type="submit" name="searchsubmit" id="scbar_btn" sc="1" class="pn pnc" value="true">搜索&ndash;&gt;-->
+                    </button>
+                </form>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html" target="_self">首&nbsp;页</a></li>
+                    <li class="li_3"><a href="javascript:;" class="noclick">图书分类</a>
+                        <dl class="li_3_content">
+                            <dd><a href="list.html"><span>平面设计</span></a></dd>
+                            <dd><a href="list.html"><span>室内设计</span></a></dd>
+                            <dd><a href="list.html"><span>机械设计</span></a></dd>
+                            <dd><a href="list.html"><span>园林景观设计</span></a></dd>
+                            <dd><a href="list.html"><span>影视后期制作</span></a></dd>
+                        </dl>
+                    </li>
+                    <li><a href="laoshi.html" target="_self">学校管理</a></li>
+                    <li><a href="ganyan.html#" target="_self">其他</a></li>
+                    <li id="jqLoginedInfo" class="li_4"><a class="noclick02" href="member.html">fluxay</a>
+                        <dl class="li_4_content">
+                            <dd><a href="member.html"><span>个人中心</span></a></dd>
+                            <dd><a href="memberStudyLog.html"><span>我的笔记</span></a></dd>
+                            <dd><a href="experience.html"><span>我的提问</span></a></dd>
+                            <dd><a href="#login/logout"><span>退出登录</span></a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="reader_center">
+            <div class="left_style">
+                <div class="menu_style">
+                    <div class="user_title">用户中心</div>
+                    <div class="user_Head">
+                        <div class="user_portrait">
+                            <a href="#" title="修改头像" class="btn_link"></a> <img src="/login/img/headimg.jpg">
+                            <div class="background_img"></div>
+                        </div>
+                        <div class="user_name">
+                            <p><span class="name" th:text="${session.username}">FIONA</span><a href="#">[修改密码]</a></p>
+                            <p>访问时间：2023-10-21 10:23</p>
+                        </div>
+                    </div>
+                    <div class="sideMen" id="sidebar">
+                        <!--菜单列表图层-->
+                        <dl class="accountSideOption1">
+                            <dt class="transaction_manage"><em class="icon_1"></em>今日推荐</dt>
+                            <dd>
+                                <ul>
+                                    <li><a th:href="@{/user/today}"> 今日推荐</a></li>
+                                    <li><a th:href="@{/user/books}"> 全部图书</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="accountSideOption1">
+                            <dt class="transaction_manage"><em class="icon_1"></em>我的图书馆</dt>
+                            <dd>
+                                <ul>
+                                    <!--                                    在书籍列表中可以进行申请借阅，如果书籍在架，则会被添加到用户，如果不在，就会被添加到我的预约&ndash;&gt;-->
+                                    <li><a th:href="@{/user/books}"> 全部图书</a></li>
+                                    <!--                                    可在此页面进行查询自己的借阅书籍-->
+                                    <li><a th:href="@{'/user/borrows?user='+${session.username}}"> 我的借阅</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="accountSideOption1">
+                            <dt class="transaction_manage"><em class="icon_2"></em>个人中心</dt>
+                            <dd>
+                                <ul>
+                                    <!--                                    可在此页面显示用户信息，并且做出修改-->
+                                    <li><a th:href="@{/user/Myuser}"> 用户信息</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="right_style">
+                <!--                用户信息模块-->
+                <div id="content3" class="page">
+                    <div class="info_content">
+                        <!--个人信息-->
+                        <div class="Personal_info" id="Personal">
+                            <div class="title_Section"><span>个人信息</span></div>
+                            <ul class="xinxi">
+                                <li><label>用户名</label> <span class="time" th:text="${session.username}">张三</span>
+                                    <div class="add_time">
+                                        <select name=""></select><select name=""></select><select name=""></select>
+                                    </div>
+                                </li>
+                                <li><label>用户性别：</label> <span class="sex">男</span>
+                                    <div class="add_sex">
+                                        <input type="radio" name="sex" value="0" checked="checked">
+                                        保密&nbsp;&nbsp;
+                                        <input type="radio" name="sex" value="1">
+                                        男&nbsp;&nbsp;
+                                        <input type="radio" name="sex" value="2">
+                                        女&nbsp;&nbsp;
+                                    </div>
+                                </li>
+                                <li><label>移动电话：</label> <span><input name="" type="text" value="234567777@qq.com"
+                                                                      class="text" disabled="disabled"/></span></li>
+                                <div class="bottom"><input name="" type="submit" value="修改信息" class="modify"/><input
+                                        name="" type="submit" value="确认修改" class="confirm"/></div>
+                            </ul>
+                            <ul class="Head_portrait">
+                                <li class="User_avatar"><img src="/login/img/people.png"/></li>
+                                <li><input name="name" type="submit" value="上传头像" class="submit"/></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+/*main 与main1 的共有样式文件*/
+
+/*头部样式属性*/
+.box {
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+.top1 {
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    color: #afc5d2;
+    line-height: 30px;
+    background-color: black;
+}
+
+.top1 p {
+    display: block;
+    float: left;
+    margin-left: 10%;
+
+}
+
+.top1 span {
+    float: right;
+    margin-right: 10%;
+}
+
+.i_top {
+    margin: 5px 10%;
+    height: 100px;
+}
+
+/*i_box样式属性*/
+.logo {
+    width: 150px;
+    height: 100px;
+    float: left;
+    margin-top: 5px;
+}
+
+.top_right {
+    width: 60%;
+    height: 100px;
+    float: right;
+    line-height: 100px;
+    margin-right: 23px;
+}
+.menu {
+    height: 32px;
+    float: right;
+}
+
+.menu li {
+    float: left;
+    font-size: 14px;
+    text-align: center;
+    line-height: 32px;
+    padding: 0;
+    margin-right: 20px;
+}
+
+.menu li a {
+    color: #9c9d9d;
+    margin: 0;
+    border-left: none;
+    font-size: 14px;
+}
+
+.menu li a.noborder {
+    border-right: none;
+}
+
+.menu a:link {
+    font-size: 14px;
+    color: #9c9d9d;
+}
+
+.menu a:visited {
+    font-size: 14px;
+    color: #9c9d9d;
+}
+
+.menu a:active {
+    font-size: 14px;
+    color: #9c9d9d;
+}
+
+.menu a:hover {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.li_3 {
+    position: relative;
+    z-index: 99;
+    /*background: url(../images/menu_01.jpg) no-repeat right;*/
+}
+
+.li_3 a {
+    color: #FFF !important;
+}
+
+.li_3 a.noclick {
+    width: 70px;
+    padding-right: 15px;
+}
+
+.li_3_content a {
+    color: #333 !important;
+    background: url(../images/menu_02.jpg) no-repeat 4px 10px;
+    padding: 2px 20px;
+}
+
+.li_3_content {
+    position: absolute;
+    top: 32px;
+    left: 0px;
+    line-height: 28px;
+    z-index: 99;
+    display: none;
+    *top: 32px;
+    width: 250px;
+    padding: 10px;
+    background: #eeeeee;
+}
+
+.li_3_content a:hover {
+    color: #f18336 !important;
+    background: url(../images/menu_03.jpg) no-repeat 4px 10px;
+}
+
+.li_3_content dd {
+    padding: 1px 0px;
+    line-height: 26px;
+}
+
+.li_3_content dd a {
+    border-right: none;
+    color: #333;
+    font-weight: normal;
+    width: 85px;
+    float: left;
+    text-align: left;
+}
+
+.li_4 {
+    position: relative;
+    z-index: 100;
+    background: url(../images/menu_04.jpg) no-repeat right;
+    _width: 90px;
+}
+
+.li_4 a:hover {
+    display: block;
+}
+
+.li_4 a.noclick02 {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    max-width: 90px;
+    margin-right: 24px;
+}
+
+.li_4_content a {
+    display: block;
+    color: #333 !important;
+}
+
+.li_4_content {
+    position: absolute;
+    top: 32px;
+    left: 0px;
+    line-height: 28px;
+    z-index: 99;
+    display: none;
+    *top: 32px;
+    width: 90px;
+    padding: 10px;
+    background: #eeeeee;
+}
+
+.li_4_content a:hover {
+    color: #f18336 !important;
+    /*background: url(../images/menu_03.jpg) no-repeat 4px 10px;*/
+}
+
+.li_4_content dd {
+}
+
+.li_4_content dd a {
+    border-right: none;
+    color: #333;
+    font-weight: normal;
+}
+
+.search {
+    width: 180px;
+    height: 32px;
+    float: right;
+
+}
+/*读者管理页面样式属性*/
+.center {
+    margin: 5px 10%;
+}
+
+.reader_center {
+    height: 600px;
+}
+
+.reader_center .left_style {
+    width: 200px;
+    float: left;
+}
+
+.reader_center .left_style .user_portrait {
+    position: relative
+}
+
+.reader_center .left_style .user_Head a.btn_link {
+    display: block;
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    top: 6px;
+    left: 63px;
+    z-index: 12
+}
+
+.reader_center .left_style .user_Head .background_img {
+    background: url(../img/d_toux_img_03.png) no-repeat;
+    width: 198px;
+    height: 101px;
+    position: relative;
+    z-index: 11;
+    top: 0px;
+}
+
+.reader_center .left_style .user_Head img {
+    position: absolute;
+    z-index: -1;
+    width: 90px;
+    height: 90px;
+    top: 6px;
+    left: 55px;
+}
+
+.reader_center .left_style .user_Head .user_name {
+    text-align: center;
+    line-height: 24px;
+    color: #666
+}
+
+.reader_center .left_style .user_Head .user_name a {
+    color: #666;
+    margin: 0px 5px;
+}
+
+.reader_center .left_style .user_Head .user_name .name {
+    font-size: 16px;
+    color: #C03;
+    font-family: "Microsoft YaHei"
+}
+.menu_style {
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 5px #ddd;
+    -webkit-box-shadow: 0px 0px 5px #e2e1e1;
+    -moz-box-shadow: 0px 0px 5px #e2e1e1;
+}

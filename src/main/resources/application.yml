@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/library?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+      username: root
+      password: root
+  messages:
+    basename: i18n.login
+  thymeleaf:
+    cache: false
+  main:
+    banner-mode=off:
+
+  debug: true

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>用户中心</title>
+    <link href="/login/css/a.css" rel="stylesheet" type="text/css"/>
+    <link href="/login/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/login/css/style2.css" rel="stylesheet" type="text/css"/>
+    <link href="/login/css/style3.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="/login/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="box">
+    <div class="top1">
+        <p th:text="|欢迎 ${session.username}|"></p>
+        <span>English | 热线电话 10086</span>
+    </div>
+    <div class="i_top">
+        <div class="logo">
+            <img src="/login/img/logo1.png" border="0" title="图书管理系统" alt="图书管理系统" width="150px" height="100px"/></a>
+        </div>
+        <div class="top_right">
+            <div class="search">
+                <form method="get" action="list.html" target="_blank">
+                    <input type="text" name="keywords" id="scbar_txt" value="" autocomplete="off" x-webkit-speech
+                           speech/>
+                    <input type="hidden" name="r" value="search/result"/>
+                    <!--                    <button type="submit" name="searchsubmit" id="scbar_btn" sc="1" class="pn pnc" value="true">搜索-->
+                    </button>
+                </form>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html" target="_self">首&nbsp;页</a></li>
+                    <li class="li_3"><a href="javascript:;" class="noclick">图书分类</a>
+                        <dl class="li_3_content">
+                            <dd><a href="list.html"><span>平面设计</span></a></dd>
+                            <dd><a href="list.html"><span>室内设计</span></a></dd>
+                            <dd><a href="list.html"><span>机械设计</span></a></dd>
+                            <dd><a href="list.html"><span>园林景观设计</span></a></dd>
+                            <dd><a href="list.html"><span>影视后期制作</span></a></dd>
+                        </dl>
+                    </li>
+                    <li><a href="laoshi.html" target="_self">学校管理</a></li>
+                    <li><a href="ganyan.html#" target="_self">其他</a></li>
+                    <li id="jqLoginedInfo" class="li_4"><a class="noclick02" href="member.html">fluxay</a>
+                        <dl class="li_4_content">
+                            <dd><a href="member.html"><span>个人中心</span></a></dd>
+                            <dd><a href="memberStudyLog.html"><span>我的笔记</span></a></dd>
+                            <dd><a href="experience.html"><span>我的提问</span></a></dd>
+                            <dd><a href="#login/logout"><span>退出登录</span></a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="reader_center">
+            <div class="left_style">
+                <div class="menu_style">
+                    <div class="user_title">管理员中心</div>
+                    <div class="user_Head">
+                        <div class="user_portrait">
+                            <a href="#" title="修改头像" class="btn_link"></a> <img src="/login/img/headimg.jpg">
+                            <div class="background_img"></div>
+                        </div>
+                        <div class="user_name">
+                            <p><span class="name" th:text="${session.username}">Root</span><a href="#">[修改密码]</a></p>
+                            <p>访问时间：2023-10-21 10:23</p>
+                        </div>
+                    </div>
+                    <div class="sideMen" id="sidebar">
+                        <!--菜单列表图层-->
+                        <dl class="accountSideOption1">
+                            <dt class="transaction_manage"><em class="icon_1"></em>图书馆事务</dt>
+                            <dd>
+                                <ul>
+                                    <li><a href="#content1"> 员工管理</a></li>
+                                    <li><a href="#content2">用户信息管理</a></li>
+                                    <li><a href="#content3 ">图书管理</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="accountSideOption1">
+                            <dt class="transaction_manage"><em class="icon_2"></em>个人中心</dt>
+                            <dd>
+                                <ul>
+                                    <li><a href="#content1"> 用户信息</a></li>
+                                    <li><a href="#content2"> 我的收藏</a></li>
+                                    <li><a href="#content3"> 我的留言</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="right_style">
+                <div id="content1" class="page">
+                    <div class="box1">
+                        <div class="row box2">
+                            <div class="col-12">
+                                <form action="#" method="post" class="form-inline input">
+                                    <input type="text" name="loginname" class="form-control input-text" placeholder="请输入职工名字">
+                                    <button type="submit" class="btn btn-primary "><i class="bi-search"></i>查询</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12 box3">
+                            <table class="table table-striped table-hover t text-center">
+                                <thead class="th">
+                                <th scope="col">序号</th>
+                                <th scope="col">姓名</th>
+                                <th scope="col">密码</th>
+                                <th scope="col">操作</th>
+                                </thead>
+                                <tbody>
+                                <!--                            <c:forEach items="${requestScope.ManagerList}" var="g">-->
+                                <!--                                <tr>-->
+                                <!--                                    <td>${g.id}</td>-->
+                                <!--                                    <td>${g.loginname}</td>-->
+                                <!--                                    <td>${g.pwd}</td>-->
+                                <!--                                    <td>-->
+                                <!--                                        <div class="btn-group">-->
+                                <!--                                            <a href="/Manager/delete?id=${g.id}" class="btn btn-danger btn-sm"><i-->
+                                <!--                                                    class="bi-trash"></i>离职</a>-->
+                                <!--                                        </div>-->
+                                <!--                                    </td>-->
+                                <!--                                </tr>-->
+                                <!--                            </c:forEach>-->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="content2" class="page">
+                    <h1>这是内容2</h1>
+                    <p>这是内容的</p>
+                </div>
+                <div id="content3" class="page">
+                    <h1>这是内容3</h1>
+                    <p>这是内容的</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer ">
+        版权所有 软件2104 &nbsp;&nbsp;&nbsp; <strong>xxy.com</strong> &nbsp;
+    </div>
+</div>
+</body>
+</html>
